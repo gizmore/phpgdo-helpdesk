@@ -46,7 +46,7 @@ final class GDO_Ticket extends GDO
     /**
      * @return GDO_User
      */
-    public function getCreator() { return $this->getValue('ticket_created_by'); }
+    public function getCreator() { return $this->gdoValue('ticket_created_by'); }
     public function getCreatedAt() { return $this->gdoVar('ticket_created_at'); }
     
 }
