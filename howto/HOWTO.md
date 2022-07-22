@@ -78,10 +78,10 @@ MethodForm expects us to overload the createForm($form) method, and add gdt fiel
         public function createForm(GDT_Form $form) : void
         {
             $tickets = GDO_Ticket::table();
-            $form->addFields(array(
+            $form->addFields(
                 $tickets->gdoColumn('ticket_title'),
                 GDT_AntiCSRF::make(),
-            ));
+            );
             $form->actions()->addField(GDT_Submit::make());
         }
     }
