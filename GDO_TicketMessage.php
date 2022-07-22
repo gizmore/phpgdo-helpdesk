@@ -1,6 +1,6 @@
 <?php
 namespace GDO\Helpdesk;
-use GDO\Comment\GDO_CommentTable;
+use GDO\Comments\GDO_CommentTable;
 /**
  * Helpdesk ticket message.
  * @author gizmore

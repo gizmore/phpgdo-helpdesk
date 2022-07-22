@@ -19,7 +19,7 @@ final class Module_Helpdesk extends GDO_Module
 	##############
 	public function getDependencies() : array
 	{
-		return ['Comment'];
+		return ['Comments'];
 	}
 	
     public function onLoadLanguage() : void

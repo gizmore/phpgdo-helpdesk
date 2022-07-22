@@ -8,7 +8,7 @@ use GDO\Date\GDT_DateTime;
 use GDO\Core\GDT_String;
 use GDO\User\GDT_User;
 use function foo\func;
-use GDO\Comment\CommentedObject;
+use GDO\Comments\CommentedObject;
 use GDO\User\GDO_User;
 use GDO\UI\GDT_Title;
 /**

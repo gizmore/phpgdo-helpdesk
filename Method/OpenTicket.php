@@ -9,7 +9,7 @@ use GDO\Form\GDT_AntiCSRF;
 use GDO\User\GDO_User;
 use GDO\Mail\Mail;
 use GDO\UI\GDT_Message;
-use GDO\Comment\GDO_Comment;
+use GDO\Comments\GDO_Comment;
 use GDO\Helpdesk\GDO_TicketMessage;
 use GDO\UI\GDT_Link;
 use GDO\Helpdesk\Module_Helpdesk;
