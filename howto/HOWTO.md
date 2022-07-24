@@ -29,7 +29,7 @@
     namespace GDO\Helpdesk;
     final class GDO_Ticket extends GDO
     {
-        public function gdoTableName() { return 'gdo_helpdesk_ticket'; }
+        public function gdoTableName() : string { return 'gdo_helpdesk_ticket'; }
         public function gdoColumns() : array
         {
             return array(

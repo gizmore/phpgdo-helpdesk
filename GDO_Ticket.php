@@ -21,7 +21,7 @@ final class GDO_Ticket extends GDO
     use CommentedObject;
     public function gdoCommentTable() { return GDO_TicketMessage::table(); }
     
-    public function gdoTableName() { return 'gdo_helpdesk_ticket'; }
+    public function gdoTableName() : string { return 'gdo_helpdesk_ticket'; }
     public function gdoColumns() : array
     {
         return array(
