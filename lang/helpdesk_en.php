@@ -1,14 +1,14 @@
 <?php
-return array(
-'cfg_helpdesk_attachments' => 'Allow attachments?',
-'cfg_hook_right_bar' => 'Hook into right menu bar?',
+return [
+	'cfg_helpdesk_attachments' => 'Allow attachments?',
+	'cfg_hook_right_bar' => 'Hook into right menu bar?',
 ##################################################################
-'link_helpdesk' => 'Helpdesk',
+	'link_helpdesk' => 'Helpdesk',
 ##################################################################
-'mt_helpdesk_openticket' => 'Create Ticket',
+	'mt_helpdesk_openticket' => 'Create Ticket',
 ##################################################################
-'mail_subj_helpdesk_ticket_created' => '[%s] New Helpdesk Ticket',
-'mail_body_helpdesk_ticket_created' => '
+	'mail_subj_helpdesk_ticket_created' => '[%s] New Helpdesk Ticket',
+	'mail_body_helpdesk_ticket_created' => '
 Hello %s,
 
 There has been created a new helpdesk ticket.
@@ -24,5 +24,5 @@ You can work on this ticket by claiming it:
 
 Kind Regards
 The %s Bot',
-    
-);
+
+];

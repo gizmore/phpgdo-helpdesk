@@ -11,7 +11,6 @@
     
     namespace GDO\Helpdesk;
     final class Module_Helpdesk extends GDO_Module {}
-    
 
 ## 2. The Ticket Table
 
@@ -61,14 +60,13 @@
             );
         }
     }
-    
 
 ## 3. Ticket Creation
 
 We create a method with a simple form.
 
     File: OpenTicket.php()
-    
+
 We will override GDO\Form\MethodForm, as it defaults to transactions on post, and has some basic GDT_Form handling code.
 MethodForm expects us to overload the createForm($form) method, and add gdt fields to the formd.
 
@@ -85,7 +83,7 @@ MethodForm expects us to overload the createForm($form) method, and add gdt fiel
             $form->actions()->addField(GDT_Submit::make());
         }
     }
-    
+
 We added the ticket title, a default submit button, and a csrf token to the form.
 When the form is successfully validated, a onSubmit_BTNNAME name method is called.
 In MethodForm we will override formValidated, which simply is called in onSubmit_submit.
@@ -95,9 +93,9 @@ In MethodForm we will override formValidated, which simply is called in onSubmit
         $ticket = GDO_Ticket::blank($form->getFormVars())->insert();
         return $this->message('msg_helpdesk_ticket_created');
     }
- 
+
 ## 4. Language File
- 
+
 We create a language file for the message above.
 
     File: helpdesk_en.php()
@@ -105,7 +103,7 @@ We create a language file for the message above.
     return array(
         'msg_helpdesk_ticket_created' => 'Your helpdesk ticket has been created.',
     );
-    
+
 Now we load the file within the module
 
     File: Module_Helpdesk.php(https://)
@@ -114,7 +112,6 @@ Now we load the file within the module
     {
         $this->loadLanguage('lang/helpdesk');
     }
-       
 
 ## 5. Hook into sidebar.
 
@@ -136,7 +133,6 @@ I think opening a ticket is more a private function, so lets hook there.
 We will use the comments module to add message functionality to our helpdesk tickets.
 Read about the comments module here: https://github.com/gizmore/gdo6-comment
 
-
 ## 7. Optional Attachments
 
 We will add a config var to the module if we allow tickets to contain attachments.
@@ -151,4 +147,3 @@ This is quite easily done by overloading getConfig in the module.
 
 This will create a boolean with the default value set to yes.
 You can access your setting under Admin->Modules->Helpdesk->Configure.
-
