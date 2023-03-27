@@ -2,6 +2,7 @@
 namespace GDO\Helpdesk;
 
 use GDO\Comments\GDO_CommentTable;
+use GDO\Core\GDO;
 
 /**
  * Helpdesk ticket message.
@@ -11,6 +12,6 @@ use GDO\Comments\GDO_CommentTable;
 final class GDO_TicketMessage extends GDO_CommentTable
 {
 
-	public function gdoCommentedObjectTable() { return GDO_Ticket::table(); }
+	public function gdoCommentedObjectTable(): GDO { return GDO_Ticket::table(); }
 
 }

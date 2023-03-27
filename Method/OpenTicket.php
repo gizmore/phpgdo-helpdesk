@@ -2,6 +2,7 @@
 namespace GDO\Helpdesk\Method;
 
 use GDO\Comments\GDO_Comment;
+use GDO\Core\GDT;
 use GDO\File\GDT_File;
 use GDO\Form\GDT_AntiCSRF;
 use GDO\Form\GDT_Form;
@@ -36,7 +37,7 @@ final class OpenTicket extends MethodForm
 		}
 	}
 
-	public function formValidated(GDT_Form $form)
+	public function formValidated(GDT_Form $form): GDT
 	{
 		$ticket = GDO_Ticket::blank($form->getFormVars())->insert();
 		$comment = GDO_Comment::blank($form->getFormVars())->insert();
