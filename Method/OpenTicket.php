@@ -19,7 +19,7 @@ use GDO\User\GDO_User;
 final class OpenTicket extends MethodForm
 {
 
-	public function createForm(GDT_Form $form): void
+	protected function createForm(GDT_Form $form): void
 	{
 		$tickets = GDO_Ticket::table();
 		$form->addFields(
